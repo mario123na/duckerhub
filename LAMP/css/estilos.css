@@ -1,0 +1,52 @@
+.header {
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-image: url('../imagenes/logo.jpg');
+  
+  height: 200px;
+  
+}
+body
+{
+	background-color: #CCCCCC;
+}
+.links
+{
+	color: #0000CC;
+}
+.links:link
+{
+	color: #0000CC;	
+	text-decoration: none;
+}
+.links:active
+{
+	color: #0000CC;	
+	text-decoration: none;
+}
+.links:visited
+{
+	color: #0000CC;	
+	text-decoration: none;
+}
+.links:hover
+{
+	font-size: 25px;
+	text-decoration: none;
+	color: #0000CC;
+}
+a
+{
+	text-decoration: none;
+	color:#000000;
+}
+a:hover
+{
+	text-decoration: none;
+	color:#000000;
+}
+
+p
+{
+	text-align: justify;
+}

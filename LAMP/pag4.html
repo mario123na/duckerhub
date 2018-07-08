@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/jquery-latest.js"></script> 
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<title>Configuracion Mysql</title>
+</head>
+<body>
+<div class="container" style="background-color: #FFFFFF;">
+			<header>
+				<img class="col-md-6 col-xs-12 col-md-offset-3 img-rounded" src="imagenes/logo-lamp.png">											
+			</header>
+		</div>
+				<div class="container">
+					<div class="row bg-warning">	
+						<nav class="navbar navbar-primary navbar-fixed-top navbar-inverse">
+							<div class="container-fluid">
+								<div class="bacbar-header">
+					 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+					 				<span class="sr-only active">Menu</span>
+					 				<span class="icon-bar"></span>
+					 				<span class="icon-bar"></span>
+					 				<span class="icon-bar"></span>
+					 				</button>
+					 				<a href="#" class="navbar-brand active">Menu</a>
+					 			</div>
+					 			<div class="collapse navbar-collapse" id="navbar-1">
+					 				<ul class="nav navbar-nav">
+				 						<li class="dropdown">
+				 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Instalaciones LAMP <span class="caret"></span></a>
+				 							<ul class="dropdown-menu">
+				 									<li value="1"><a  href="index.html#apache2">Instalacion Apache2</a></li>
+					 								<li value="2"><a  href="index.html#php5">Instalacion PHP5</a></li>
+					 								<li value="3"><a  href="index.html#mysql"> Instalacion Mysql</a></li>
+					 								<li value="4"><a  href="pag2.html#phpmyadmin">Instalacion PHPMyadmin</a></li>
+				 							</ul>
+				 						</li>
+				 						<li class="dropdown">
+				 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Configuraciones LAMP <span class="caret"></span></a>
+					 						<ul class="dropdown-menu">
+					 							<li value="4"><a  href="pag3.html#capache">Configuracion Apache2</a></li>
+						 						<li value="4"><a  href="pag4.html#cmysql">Configuracion Mysql</a></li>	
+					 						</ul>
+				 						</li>
+					 				</ul>
+							</div>
+						</nav>
+						
+						<div class="col-xs-12 col-md-12 bg-warning" >
+							<br>
+							<h3 id="cmysql"> Configuracion Mysql</h3>
+							<p>Si deseamos  habilitar los logs de mysql  se debe hacer lo siguiente:</p>
+							<p>Vamos y abrimos el archivo:</p>
+							<pre>/etc/mysql/my.cnf</pre>
+							<p>Y dentro del  descomentaremos las siguientes líneas:</p>
+							<pre>#general_log_file        = /var/log/mysql/mysql.log<br>#general_log             = 1<br>#log_bin                 = /var/log/mysql/mysql-bin.log</pre>
+							<p>Y al final de este mismo archivo my.cnf agregaremos las siguientes líneas</p>
+							<pre>long_query_time = 10<br>server-id = 0<br>slow_query_log_file = "/var/log/mysql/mysql-slow.log"<br>slow-query-log</pre>
+							<p>Luego  guardamos los cambios pero antes de reiniciar el servicio debemos crear estos archivos que se guardaran los logs </p>
+							<p>Nos vamos a la dirección  <k>/var/log/mysql</k></p>
+							<p>con el comando</p>
+							<pre>cd /var/log/mysql</pre>
+							<p>Dentro de esta carpeta crearemos tres  archivos, con los comandos:</p>
+							<pre>touch mysql.log mysql-bin.log mysql-slow.log</pre>
+							<p>Una vez creados debemos asignarle como dueño de los archivos  el usuario mysql que se crea la instalar la BD, con el comando:</p>
+							<pre>chown mysql:mysql mysql.log mysql-slow.log mysql-bin.log</pre>
+							<p>Y ahora con todas estas configuraciones podemos reiniciar el servicio de mysql, con el  comando:</p>
+							<pre>/etc/init.d/mysql reload<br>/etc/init.d/mysql restart</pre>
+
+
+						</div>
+						
+					</div>
+					<div class="row" >
+						<div class="container bg-warning col-md-12 col-xs-12" >
+							<blockquote class="blockquote-reverse  ">
+								<p>
+									El éxito tiene una simple fórmula: da lo mejor de ti y puede que a la gente le guste
+								</p>
+								<footer>
+									Sam Ewing.
+								</footer>
+							</blockquote>
+						</div>	
+					</div>		
+				</div>
+
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/jquery-latest.js"></script> 
+</body>
+</html>

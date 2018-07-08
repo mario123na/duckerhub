@@ -1,0 +1,185 @@
+﻿<html>
+	<head>
+	<title>
+		LAMP server	
+	</title>
+	
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/jquery-latest.js"></script> 
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+	
+	
+	<script type="text/javascript">
+		var click = 1;
+		function mostrar(){
+		if(click==1)
+			{
+				document.getElementById('mysql-14').style.display = 'block';
+				click = click + 1;
+			}
+			else
+			{
+				document.getElementById('mysql-14').style.display = 'none';
+				click = 1;
+			}	
+		
+		}
+		function mostrar2(){
+		if(click==1)
+			{
+				document.getElementById('mysql-12').style.display = 'block';
+				click = click + 1;
+			}
+			else
+			{
+				document.getElementById('mysql-12').style.display = 'none';
+				click = 1;
+			}	
+		
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+
+	<body>
+
+		<div class="container" style="background-color: #FFFFFF;">
+			<br>
+			<br>
+			<br>
+			<header>
+				<img class="col-md-6 col-xs-12 col-md-offset-3 img-rounded" src="imagenes/logo-lamp.png">											
+			</header>
+		</div>
+				<div class="container">
+					<div class="row bg-warning">	
+						
+						<nav class="navbar navbar-primary navbar-fixed-top navbar-inverse">
+							<div class="container-fluid">
+								<div class="bacbar-header">
+					 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+					 				<span class="sr-only">Menu</span>
+					 				<span class="icon-bar"></span>
+					 				<span class="icon-bar"></span>
+					 				<span class="icon-bar"></span>
+					 				</button>
+					 				<a href="#" class="navbar-brand">Menu</a>
+					 			</div>
+					 			<div class="collapse navbar-collapse" id="navbar-1">
+					 				<ul class="nav navbar-nav">
+				 						<li class="dropdown">
+				 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Instalaciones LAMP <span class="caret"></span></a>
+				 							<ul class="dropdown-menu">
+				 									<li value="1"><a  href="index.html#apache2">Instalacion Apache2</a></li>
+					 								<li value="2"><a  href="index.html#php5">Instalacion PHP5</a></li>
+					 								<li value="3"><a  href="index.html#mysql"> Instalacion Mysql</a></li>
+					 								<li value="4"><a  href="pag2.html#phpmyadmin">Instalacion PHPMyadmin</a></li>
+				 							</ul>
+				 						</li>
+				 						<li class="dropdown">
+				 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Configuraciones LAMP <span class="caret"></span></a>
+					 						<ul class="dropdown-menu">
+					 							<li value="4"><a  href="pag3.html#capache">Configuracion Apache2</a></li>
+						 						<li value="4"><a  href="pag4.html#cmysql">Configuracion Mysql</a></li>	
+					 						</ul>
+				 						</li>
+					 				</ul>
+							</div>
+						</nav>
+
+
+						
+						<div class="col-xs-12 col-md-12 " >
+							<h1><a name="lamp" id="lamp">Que es LAMP</a></h1>
+							<p>LAMP es el acrónimo usado para describir un sistema de infraestructura de internet que usa las siguientes herramientas:</p>
+
+							<ol>
+								<li>Linux, el sistema operativo; En algunos casos también se refiere a LDAP.</li>
+								<li>Apache, el servidor web;</li>
+								<li>MySQL/MariaDB, el gestor de bases de datos;</li>
+								<li>Perl, PHP, o Python, los lenguajes de programación.</li>
+							</ol>
+							<p>La combinación de estas tecnologías es usada principalmente para definir la infraestructura de un servidor web, utilizando un paradigma de programación para el desarrollo.</p>
+
+							<p>A pesar de que el origen de estos programas de código abierto no han sido específicamente diseñado para trabajar entre sí, la combinación se popularizó debido a su bajo coste de adquisición y ubicuidad de sus componentes (ya que vienen pre-instalados en la mayoría de las distribuciones linux). Cuando son combinados, representan un conjunto de soluciones que soportan servidores de aplicaciones.</p>
+
+							<h3><a name="apache2" id="apache2">1. Instalacion Apache2</a></h3>
+							<p>Colocamos el siguiente comando en la consola:</p>
+							<pre>apt-get install apache2</pre>
+							<p>Una vez instalado el servidor apache nos dirigimos al navegador y colocamos la direccion http://localhost o la direccion http://127.0.0.1 y nos debe mostrar una pantalla asi:</p>
+							<img class="col-md-12 col-xs-12 img-thumbnail" src="imagenes/apache.jpg">
+							<br>
+							<br>
+							<br>
+							<p>nos vamos al archivo fqdn para cambiar el nombre del servidor</p>
+							<pre>vim /etc/apache2/conf-available/fqdn.conf</pre>
+							<p>y agregamos el texto para colocar el nombre del servidor</p>
+							<pre>ServerName localhost</pre> 
+							<p>Habilitamos la configuracion FQDN</p>
+							<pre>a2enconf fqdn</pre> 
+							<p> y finalizamos reiniciando nuestro servidor</p>
+							<pre>/etc/init.d/apache2 reload  <br>/etc/init.d/apache2 restart</pre>
+
+							<h3><a name="php5" id="php5">2. Instalacion PHP5</a></h3>
+							<p>La instalacion en si del complemento PHP5 es muy sencillo vas con ejecutar los comandos</p>
+							<pre>apt-get install libapache2-mod-php5 php5 php5-mcrypt</pre>
+							<p>Es estos paquete de instalacion incluimos los paquetes para que apache sea capaz de soportar y usar php</p>
+							
+							<h3><a name="mysql" id="mysql">3. Instalacion de Mysql-Server</a></h3>
+							
+								<div class="btn-group">
+									<button class="btn"  onclick="mostrar()">Ubuntu 14.04 o superior</button>
+									<button  class="btn" onclick="mostrar2()">Ubuntu 12.04 o inferior</button>
+								</div>
+							
+								<br>
+								<br>
+								<br>
+
+							<div id="mysql-14" style="display: none;">	
+								<p>En este caso ya que trabajamos en un Ubuntu 14.04 la version de mysql que instala por defecto es la 5.5, he instalaremos la 5.6 por ciertas nuevas funcionabilidades, se instala de la siguiente manera</p>
+								<pre>apt-get install mysql-client-core-5.6 mysql-client-5.6 mysql-server-core-5.6 mysql-server-5.6</pre>
+								<p>Dentro de la misma instalacion del mysql-server se nos pedira una contraseña para el usuario root</p>
+								<p>ya que debe trabajar en conjunto las tres herramientas debemos instalar librerias para usar en conjunto php y mysql, asi:</p>
+								<pre>apt-get install php5-mysqlnd php5-mysqlnd-ms php5-cli</pre>
+								<p>Para estar seguros que la extension mcrypt(encriptación de datos) este habilitada, usamos el siguiente comando:</p>
+								<pre>sudo php5enmod mcrypt</pre>
+								<p>finalmente recargamos nuestro servidor web</p>
+								<pre>/etc/init.d/apache2 reload <br>/etc/init.d/apache2 restart</pre>
+							</div>
+							<div id="mysql-12" style="display: none;">	
+								<p>En este caso ya que trabajamos en un Ubuntu 12.04 la version de mysql que instala por defecto es la 5.5,se instala de la siguiente manera</p>
+								<pre>apt-get install mysql-client-core-5.5 mysql-client-5.5 mysql-server-core-5.5 mysql-server-5.5</pre>
+								<p>Dentro de la misma instalacion del mysql-server se nos pedira una contraseña para el usuario root</p>
+								<p>ya que debe trabajar en conjunto las tres herramientas debemos instalar librerias para usar en conjunto php y mysql, asi:</p>
+								<pre>apt-get install php5-mysqlnd php5-mysqlnd-ms php5-cli</pre>
+								<p>Para estar seguros que la extension mcrypt(encriptación de datos) este habilitada, usamos el siguiente comando:</p>
+								<pre>sudo php5enmod mcrypt</pre>
+								<p>finalmente recargamos nuestro servidor web</p>
+								<pre>/etc/init.d/apache2 reload <br>/etc/init.d/apache2 restart</pre>
+							</div>
+
+						</div>
+						
+					</div>
+					<div class="row" >
+						<div class="container bg-warning col-md-12 col-xs-12" >
+							<blockquote class="blockquote-reverse  ">
+								<p>
+									El éxito tiene una simple fórmula: da lo mejor de ti y puede que a la gente le guste
+								</p>
+								<footer>
+									Sam Ewing.
+								</footer>
+							</blockquote>
+						</div>	
+					</div>		
+				</div>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/jquery-latest.js"></script> 
+	</body>
+</html>
+ 

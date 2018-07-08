@@ -1,0 +1,86 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>LAMP server</title>
+	
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/jquery-latest.js"></script> 
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+		
+		<div class="container" style="background-color: #FFFFFF;">
+			<header>
+				<img class="col-md-6 col-xs-12 col-md-offset-3 img-rounded" src="imagenes/logo-lamp.png" >											
+			</header>
+		</div>
+		<div class="container ">
+					<div class="row bg-warning">	
+						
+						<nav class="navbar navbar-primary navbar-fixed-top navbar-inverse">
+							<div class="container-fluid">
+								<div class="bacbar-header">
+					 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+					 				<span class="sr-only active" disabled>Menu</span>
+					 				<span class="icon-bar"></span>
+					 				<span class="icon-bar"></span>
+					 				<span class="icon-bar"></span>
+					 				</button>
+					 				<a href="#" class="navbar-brand active" disabled>Menu</a>
+					 			</div>
+					 			<div class="collapse navbar-collapse" id="navbar-1">
+					 				<ul class="nav navbar-nav">
+				 						<li class="dropdown">
+				 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Instalaciones LAMP <span class="caret"></span></a>
+				 							<ul class="dropdown-menu">
+				 									<li value="1"><a  href="index.html#apache2">Instalacion Apache2</a></li>
+					 								<li value="2"><a  href="index.html#php5">Instalacion PHP5</a></li>
+					 								<li value="3"><a  href="index.html#mysql"> Instalacion Mysql</a></li>
+					 								<li value="4"><a  href="pag2.html#phpmyadmin">Instalacion PHPMyadmin</a></li>
+				 							</ul>
+				 						</li>
+				 						<li class="dropdown">
+				 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Configuraciones LAMP <span class="caret"></span></a>
+					 						<ul class="dropdown-menu">
+					 							<li value="4"><a  href="pag3.html#capache">Configuracion Apache2</a></li>
+						 						<li value="4"><a  href="pag4.html#cmysql">Configuracion Mysql</a></li>	
+					 						</ul>
+				 						</li>
+					 				</ul>
+							</div>
+						</nav>
+						
+						<div class="col-xs-12 col-md-12 bg-warning" id="phpmyadmin" >
+							<h3>Instalacion de PHPMyadmin</h3>
+							<p>Instalaremos PHPMyadmin para una mejor gestion de BD que hemos instalado con mysql, con el comando:</p>	
+							<pre>apt-get install phpmyadmin</pre>
+							<p> Una vez instalado el phpmyadmin para probarlo debemos hacer lo mismo que al probar el servidor apache, nos vamos a http://localhost o http//127.0.0.1 o  la ip de nuestro servidor, pero esta vez colocaremos /phpmyadmin, en el navegador se ingresado asi: http://127.0.0.1/phpmyadmin y nos mostrara la siguiente pantalla:
+							<img class="col-xs-12 col-md-12 img-thumbnail" src="imagenes/phpmyadmin.jpg" >
+							<p> Una vez logueados nos mostrara la siguente pantalla donde nos muestra el menu principal se observa las BD que se han creado actualmente en mysql junto con diferentes opciones ya el manejo de las mismas es uso exclusivo del administrador, una muestra de como es la pantalla principal:</p>		
+							<img class="col-xs-12 col-md-12 img-thumbnail" src="imagenes/menu.jpg">
+							<p>Y como hemos visto asi se realiza la instalacion de PHPMyadmin</p>
+						</div>
+					</div>
+						<div class="row" >
+							<div class="container bg-warning col-md-12 col-xs-12" >
+								<blockquote class="blockquote-reverse">
+									<p>
+										El éxito tiene una simple fórmula: da lo mejor de ti y puede que a la gente le guste
+									</p>
+									<footer>
+										Sam Ewing.
+									</footer>
+								</blockquote>
+							</div>	
+						</div>	
+				</div>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/jquery-latest.js"></script> 			
+</body>
+</html>

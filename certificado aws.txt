@@ -1,0 +1,45 @@
+Approve SSL/TLS certificate request
+
+A GeoTrust SSL/TLS certificate was requested for papajohnscdmx.com. As the domain contact for this order, you need to approve the request by verifying that you own or control the domain. We can issue certificates for papajohnscdmx.com after your approval.
+
+Order Details
+
+Domain Name	
+papajohnscdmx.com
+Organization	
+Papa John's Pizzas
+Authorization
+
+I confirm that I am the Domain Contact for the domains referenced above. I confirm and agree that SSL/TLS certificates can be issued for sites ending in papajohnscdmx.com.
+1.	Gabriel Santana (account #1662417) has the authority to apply for SSL certificates for this domain on behalf of Papa John's Pizzas (domain #).
+2.	Papa John's Pizzas has the right to use and obtain SSL certificates for the domains listed above as well as any subdomains of the listed domains.
+3.	GeoTrust may rely on this authorization for any subsequent SSL certificate renewals or any orders placed by Papa John's Pizzas until this authorization is revoked by written notice sent to GeoTrust (Attention Legal), 2801 North Thanksgiving Way, Suite 500, Lehi UT, 84043 USA.
+4.	I will promptly notify GeoTrust if this authorization is revoked or if a domain name listed above is transferred to a 3rd party.
+5.	GeoTrust may reconfirm Gabriel Santana has control over the domains and approval of the corresponding certificates by sending a reconfirmation email to this email address. I acknowledge that I may not opt out of receiving reconfirmation emails.
+
+Thank you! We’ll continue to work on your request and notify you about further updates.
+
+
+Greetings,
+
+Thank you for buying a Geotrust SSL certificate.
+
+To get your certificate:
+
+1. Provide your certificate signing request (CSR):
+https://security-center.geotrust.com/process/retail/console_login?application_locale=GEOTRUST_US
+
+2.  For a purchase order, check, or wire transfer, review payment instructions: 
+https://knowledge.geotrust.com/support/knowledge-base/index?page=content&id=AR1062
+
+3. Your organization contact needs to approve your order. We will email or call them for approval.
+
+When complete, we will email you instructions to download and install your certificate.
+
+Thank you,
+
+GeoTrust
+
+airbag
+
+

@@ -1,0 +1,5 @@
+open ftpes://mario123na:MAMC1991mangu22-@ftp.drivehq.com/
+lcd "C:\Users\mario martinez\Desktop\avalogics"
+cd /ftp
+put *
+bye
